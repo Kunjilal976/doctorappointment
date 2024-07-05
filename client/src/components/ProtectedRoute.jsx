@@ -11,7 +11,7 @@ export const ProtectedRoute = ({children}) => {
 
  const getUser=async()=>{
   try {
-    dispatch(showLoading);
+    dispatch(showLoading());
     const res=await axios.post('/api/user/getUserData',
     {token: localStorage.getItem('token')},
     {
